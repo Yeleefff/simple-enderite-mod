@@ -1,0 +1,57 @@
+{
+  "parent": "enderitemod:end/obtain_enderite_ore",
+  "criteria": {
+    "enderite_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enderitemod:enderite_helmet"
+            ]
+          },
+          {
+            "items": [
+              "enderitemod:enderite_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "enderitemod:enderite_leggings"
+            ]
+          },
+          {
+            "items": [
+              "enderitemod:enderite_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Enderite armor"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "enderitemod:enderite_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cover Me in Debris: The Sequel"
+    }
+  },
+  "requirements": [
+    [
+      "enderite_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

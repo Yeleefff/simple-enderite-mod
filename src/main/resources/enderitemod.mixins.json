@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.yeleefff.enderitemod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ItemEntityVoidFloatingMixin",
+    "NetheriteUpgradeSlotTexturesInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

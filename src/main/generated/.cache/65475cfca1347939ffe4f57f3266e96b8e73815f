@@ -1,0 +1,5 @@
+// 1.20.2	2023-12-12T07:48:08.218253	Simple Enderite Mod/Tags for minecraft:block
+f9f2feafd43e251fab8335fec502258800c66674 data/minecraft/tags/blocks/dragon_immune.json
+f9f2feafd43e251fab8335fec502258800c66674 data/minecraft/tags/blocks/mineable/pickaxe.json
+2d45745ad6997bea846ddadba5eacf599eab7e52 data/minecraft/tags/blocks/beacon_base_blocks.json
+f9f2feafd43e251fab8335fec502258800c66674 data/fabric/tags/blocks/need_tool_level_4.json

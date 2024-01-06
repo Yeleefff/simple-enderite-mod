@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "enderite",
+  "ingredients": [
+    {
+      "item": "enderitemod:enderite_scrap"
+    },
+    {
+      "item": "enderitemod:enderite_scrap"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    }
+  ],
+  "result": {
+    "item": "enderitemod:enderite_ingot"
+  }
+}

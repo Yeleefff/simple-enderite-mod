@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:end/root",
+  "criteria": {
+    "has_enderite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enderitemod:enderite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain Enderite Debris"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "enderitemod:enderite_ore"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Hidden in the Void"
+    }
+  },
+  "requirements": [
+    [
+      "has_enderite_ore"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

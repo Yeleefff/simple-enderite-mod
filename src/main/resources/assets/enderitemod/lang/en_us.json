@@ -1,0 +1,28 @@
+{
+  "item.enderitemod.enderite_scrap": "Enderite Scrap",
+  "item.enderitemod.enderite_ingot": "Enderite Ingot",
+
+  "item.enderitemod.enderite_upgrade_smithing_template": "Enderite Upgrade Template",
+
+  "item.enderitemod.enderite_sword": "Enderite Sword",
+  "item.enderitemod.enderite_pickaxe": "Enderite Pickaxe",
+  "item.enderitemod.enderite_axe": "Enderite Axe",
+  "item.enderitemod.enderite_shovel": "Enderite Shovel",
+  "item.enderitemod.enderite_hoe": "Enderite Hoe",
+
+  "item.enderitemod.enderite_helmet": "Enderite Helmet",
+  "item.enderitemod.enderite_chestplate": "Enderite Chestplate",
+  "item.enderitemod.enderite_leggings": "Enderite Leggings",
+  "item.enderitemod.enderite_boots": "Enderite Boots",
+
+  "block.enderitemod.enderite_ore": "Enderite Debris",
+  "block.enderitemod.enderite_block": "Block of Enderite",
+
+  "item.enderitemod.smithing_template.enderite_upgrade.additions_slot_description": "Add Enderite Ingot",
+  "item.enderitemod.smithing_template.enderite_upgrade.applies_to": "Netherite Equipment",
+  "item.enderitemod.smithing_template.enderite_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.enderitemod.smithing_template.enderite_upgrade.ingredients": "Enderite Ingot",
+  "upgrade.enderitemod.enderite_upgrade": "Enderite Upgrade",
+
+  "trim_material.enderitemod.enderite": "Enderite Material"
+}
