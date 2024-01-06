@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "up": "enderitemod:block/enderite_ore_top",
+    "down": "enderitemod:block/enderite_ore_top",
+    "north": "enderitemod:block/enderite_ore_side",
+    "east": "enderitemod:block/enderite_ore_side",
+    "south": "enderitemod:block/enderite_ore_side",
+    "west": "enderitemod:block/enderite_ore_side",
+    "particle": "enderitemod:block/enderite_ore_side"
+  }
+}

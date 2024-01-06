@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 2.0,
+  "ingredient": {
+    "item": "enderitemod:enderite_ore"
+  },
+  "result": "enderitemod:enderite_scrap"
+}
