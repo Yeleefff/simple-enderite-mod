@@ -5,8 +5,10 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.BlastingRecipe;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.SmeltingRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 import net.yeleefff.enderitemod.block.ModBlocks;
@@ -26,12 +28,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        CookingRecipeJsonBuilder.create(Ingredient.ofItems(ModBlocks.ENDERITE_ORE), RecipeCategory.MISC, ModItems.ENDERITE_SCRAP, 2.0f, 200, RecipeSerializer.SMELTING)
+        CookingRecipeJsonBuilder.create(Ingredient.ofItems(ModBlocks.ENDERITE_ORE), RecipeCategory.MISC, ModItems.ENDERITE_SCRAP, 2.0f, 200, RecipeSerializer.SMELTING, SmeltingRecipe::new)
                 .group("enderite")
                 .criterion("has_enderite_ore", FabricRecipeProvider.conditionsFromItem(ModBlocks.ENDERITE_ORE))
                 .offerTo(exporter, "enderitemod:" + RecipeProvider.getItemPath(ModItems.ENDERITE_SCRAP) + "_from_smelting_" + RecipeProvider.getItemPath(ModBlocks.ENDERITE_ORE));
 
-        CookingRecipeJsonBuilder.create(Ingredient.ofItems(ModBlocks.ENDERITE_ORE), RecipeCategory.MISC, ModItems.ENDERITE_SCRAP, 2.0f, 100, RecipeSerializer.BLASTING)
+        CookingRecipeJsonBuilder.create(Ingredient.ofItems(ModBlocks.ENDERITE_ORE), RecipeCategory.MISC, ModItems.ENDERITE_SCRAP, 2.0f, 100, RecipeSerializer.BLASTING, BlastingRecipe::new)
                 .group("enderite")
                 .criterion("has_enderite_ore", FabricRecipeProvider.conditionsFromItem(ModBlocks.ENDERITE_ORE))
                 .offerTo(exporter, "enderitemod:" + FabricRecipeProvider.getItemPath(ModItems.ENDERITE_SCRAP) + "_from_blasting_" + FabricRecipeProvider.getItemPath(ModBlocks.ENDERITE_ORE));
