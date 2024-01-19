@@ -1,9 +1,0 @@
-{
-  "asset_name": "enderite_darker",
-  "description": {
-    "color": "#1A5551",
-    "translate": "why does darker not work"
-  },
-  "ingredient": "enderitemod:enderite_ingot",
-  "item_model_index": 0.71337
-}

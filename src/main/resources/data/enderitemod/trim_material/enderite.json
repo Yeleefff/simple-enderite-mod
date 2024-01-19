@@ -5,7 +5,7 @@
     "translate": "trim_material.enderitemod.enderite"
   },
   "ingredient": "enderitemod:enderite_ingot",
-  "item_model_index": 0.71337,
+  "item_model_index": 0.711,
   "override_armor_materials": {
     "enderitemod:enderite": "enderite_darker"
   }
