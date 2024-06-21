@@ -7,7 +7,8 @@
     "item": "minecraft:netherite_axe"
   },
   "result": {
-    "item": "enderitemod:enderite_axe"
+    "count": 1,
+    "id": "enderitemod:enderite_axe"
   },
   "template": {
     "item": "enderitemod:enderite_upgrade_smithing_template"

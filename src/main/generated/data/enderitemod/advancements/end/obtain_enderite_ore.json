@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "enderitemod:enderite_ore"
-            ]
+            "items": "enderitemod:enderite_ore"
           }
         ]
       },
@@ -15,19 +13,12 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
-    "description": {
-      "text": "Obtain Enderite Debris"
-    },
-    "frame": "task",
-    "hidden": false,
+    "description": "Obtain Enderite Debris",
     "icon": {
-      "item": "enderitemod:enderite_ore"
+      "count": 1,
+      "id": "enderitemod:enderite_ore"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Hidden in the Void"
-    }
+    "title": "Hidden in the Void"
   },
   "requirements": [
     [

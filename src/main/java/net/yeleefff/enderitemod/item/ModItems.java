@@ -1,9 +1,9 @@
 package net.yeleefff.enderitemod.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.component.type.AttributeModifiersComponent;
+import net.minecraft.component.type.ToolComponent;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.text.Text;
@@ -12,9 +12,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Util;
 import net.yeleefff.enderitemod.EnderiteMod;
-import net.yeleefff.enderitemod.item.custom.ModAxeItem;
-import net.yeleefff.enderitemod.item.custom.ModHoeItem;
-import net.yeleefff.enderitemod.item.custom.ModPickaxeItem;
 import net.yeleefff.enderitemod.mixin.NetheriteUpgradeSlotTexturesInvoker;
 
 import java.util.List;
@@ -23,11 +20,10 @@ import static net.yeleefff.enderitemod.EnderiteMod.MOD_ID;
 
 public class ModItems {
 
-    // Basic items
     public static final Item ENDERITE_SCRAP = registerItems("enderite_scrap",
-            new Item(new FabricItemSettings().fireproof()));
+            new Item(new Item.Settings().fireproof()));
     public static final Item ENDERITE_INGOT = registerItems("enderite_ingot",
-            new Item(new FabricItemSettings().fireproof()));
+            new Item(new Item.Settings().fireproof()));
 
     public static final Item ENDERITE_UPGRADE_SMITHING_TEMPLATE = registerItems("enderite_upgrade_smithing_template",
             new SmithingTemplateItem(
@@ -39,36 +35,39 @@ public class ModItems {
                     NetheriteUpgradeSlotTexturesInvoker.invokeGetNetheriteUpgradeEmptyBaseSlotTextures(),
                     NetheriteUpgradeSlotTexturesInvoker.invokeGetNetheriteUpgradeEmptyAdditionsSlotTextures()));
 
-    // Tools
     public static final Item ENDERITE_SWORD = registerItems("enderite_sword",
-            new SwordItem(ModToolMaterials.ENDERITE, 8, -2.4f,
-                    new FabricItemSettings().fireproof()));
+            new SwordItem(ModToolMaterials.ENDERITE,
+                    new Item.Settings().fireproof()
+                            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ENDERITE, 8, -2.4f))));
     public static final Item ENDERITE_SHOVEL = registerItems("enderite_shovel",
-            new ShovelItem(ModToolMaterials.ENDERITE, 5.5f, -3f,
-                    new FabricItemSettings().fireproof()));
+            new ShovelItem(ModToolMaterials.ENDERITE,
+                    new Item.Settings().fireproof()
+                            .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.ENDERITE,0.5f, -3f))));
     public static final Item ENDERITE_PICKAXE = registerItems("enderite_pickaxe",
-            new ModPickaxeItem(ModToolMaterials.ENDERITE, 6, -2.8f,
-                    new FabricItemSettings().fireproof()));
+            new PickaxeItem(ModToolMaterials.ENDERITE,
+                    new Item.Settings().fireproof()
+                            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.ENDERITE, 6, -2.8f))));
     public static final Item ENDERITE_AXE = registerItems("enderite_axe",
-            new ModAxeItem(ModToolMaterials.ENDERITE, 10, -3f,
-                    new FabricItemSettings().fireproof()));
+            new AxeItem(ModToolMaterials.ENDERITE,
+                    new Item.Settings().fireproof()
+                            .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ENDERITE, 10, -3f))));
     public static final Item ENDERITE_HOE = registerItems("enderite_hoe",
-            new ModHoeItem(ModToolMaterials.ENDERITE, 0, 0f,
-                    new FabricItemSettings().fireproof()));
+            new HoeItem(ModToolMaterials.ENDERITE,
+                    new Item.Settings().fireproof()
+                            .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.ENDERITE, 0, 0f))));
 
-    // Armor
     public static final Item ENDERITE_HELMET = registerItems("enderite_helmet",
             new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.HELMET,
-                    new FabricItemSettings().fireproof()));
+                    new Item.Settings().fireproof()));
     public static final Item ENDERITE_CHESTPLATE = registerItems("enderite_chestplate",
             new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.CHESTPLATE,
-                    new FabricItemSettings().fireproof()));
+                    new Item.Settings().fireproof()));
     public static final Item ENDERITE_LEGGINGS = registerItems("enderite_leggings",
             new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.LEGGINGS,
-                    new FabricItemSettings().fireproof()));
+                    new Item.Settings().fireproof()));
     public static final Item ENDERITE_BOOTS = registerItems("enderite_boots",
             new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.BOOTS,
-                    new FabricItemSettings().fireproof()));
+                    new Item.Settings().fireproof()));
 
     public static final List<Item> ENDERITE_TOOLS_AND_ARMOR_LIST = List.of(ModItems.ENDERITE_AXE, ModItems.ENDERITE_PICKAXE, ModItems.ENDERITE_SHOVEL, ModItems.ENDERITE_HOE, ModItems.ENDERITE_SWORD,
             ModItems.ENDERITE_HELMET, ModItems.ENDERITE_CHESTPLATE, ModItems.ENDERITE_LEGGINGS, ModItems.ENDERITE_BOOTS);

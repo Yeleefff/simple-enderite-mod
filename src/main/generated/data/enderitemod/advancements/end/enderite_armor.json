@@ -5,24 +5,16 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "enderitemod:enderite_helmet"
-            ]
+            "items": "enderitemod:enderite_helmet"
           },
           {
-            "items": [
-              "enderitemod:enderite_chestplate"
-            ]
+            "items": "enderitemod:enderite_chestplate"
           },
           {
-            "items": [
-              "enderitemod:enderite_leggings"
-            ]
+            "items": "enderitemod:enderite_leggings"
           },
           {
-            "items": [
-              "enderitemod:enderite_boots"
-            ]
+            "items": "enderitemod:enderite_boots"
           }
         ]
       },
@@ -30,20 +22,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
-    "description": {
-      "text": "Get a full set of Enderite armor"
-    },
+    "description": "Get a full set of Enderite armor",
     "frame": "challenge",
-    "hidden": false,
     "icon": {
-      "item": "enderitemod:enderite_chestplate",
-      "nbt": "{Damage:0}"
+      "count": 1,
+      "id": "enderitemod:enderite_chestplate"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Cover Me in Debris: The Sequel"
-    }
+    "title": "Cover Me in Debris: The Sequel"
   },
   "requirements": [
     [

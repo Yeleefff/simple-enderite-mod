@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "enderitemod:enderite_hoe"
-            ]
+            "items": "enderitemod:enderite_hoe"
           }
         ]
       },
@@ -15,20 +13,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
-    "description": {
-      "text": "Use an Enderite Ingot to upgrade a Netherite Hoe after failing to rethink your life choices"
-    },
+    "description": "Use an Enderite Ingot to upgrade a Netherite Hoe after failing to rethink your life choices",
     "frame": "challenge",
     "hidden": true,
     "icon": {
-      "item": "enderitemod:enderite_hoe",
-      "nbt": "{Damage:0}"
+      "count": 1,
+      "id": "enderitemod:enderite_hoe"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Too Much Dedication"
-    }
+    "title": "Too Much Dedication"
   },
   "requirements": [
     [

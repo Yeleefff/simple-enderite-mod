@@ -12,14 +12,24 @@ public class ModLootTableModifiers {
     private static final Identifier END_CITY_CHEST_ID = new Identifier("minecraft", "chests/end_city_treasure");
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
+//        LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
+//            if (END_CITY_CHEST_ID.equals(id)) {
+//                LootPool.Builder poolBuilder = LootPool.builder()
+//                        .rolls(ConstantLootNumberProvider.create(1.0f))
+//                        .conditionally(RandomChanceLootCondition.builder(0.05f))
+//                        .with(ItemEntry.builder(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE));
+//                tableBuilder.pool(poolBuilder.build());
+//            }
+//        }));
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id) -> {
             if (END_CITY_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.05f))
                         .with(ItemEntry.builder(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE));
-                tableBuilder.pool(poolBuilder.build());
+                lootManager.pool(poolBuilder.build());
             }
-        }));
+        });
     }
 }

@@ -13,7 +13,7 @@
     "###"
   ],
   "result": {
-    "item": "enderitemod:enderite_block"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "enderitemod:enderite_block"
+  }
 }

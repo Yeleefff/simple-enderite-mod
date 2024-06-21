@@ -7,21 +7,23 @@ import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.yeleefff.enderitemod.EnderiteMod;
 import net.yeleefff.enderitemod.block.ModBlocks;
 import net.yeleefff.enderitemod.item.ModItems;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModAdvancementProvider extends FabricAdvancementProvider {
-    public ModAdvancementProvider(FabricDataOutput output) {
-        super(output);
+    public ModAdvancementProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(output, registryLookup);
     }
 
     @Override
-    public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
+    public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
         AdvancementEntry obtainEnderiteOre = Advancement.Builder.create().parent(new Identifier("end/root")).display(
                 ModBlocks.ENDERITE_ORE,
                 Text.literal("Hidden in the Void"),

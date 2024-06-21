@@ -7,5 +7,7 @@
   "ingredient": {
     "item": "enderitemod:enderite_ore"
   },
-  "result": "enderitemod:enderite_scrap"
+  "result": {
+    "id": "enderitemod:enderite_scrap"
+  }
 }

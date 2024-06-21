@@ -7,7 +7,8 @@
     "item": "minecraft:netherite_sword"
   },
   "result": {
-    "item": "enderitemod:enderite_sword"
+    "count": 1,
+    "id": "enderitemod:enderite_sword"
   },
   "template": {
     "item": "enderitemod:enderite_upgrade_smithing_template"

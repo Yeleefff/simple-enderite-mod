@@ -1,4 +1,4 @@
-// 1.20.2	2023-12-12T07:48:08.220695	Simple Enderite Mod/Advancements
-7bcb5b6c974f8d8388ee2e0e54c550e39533ffca data/enderitemod/advancements/end/enderite_armor.json
-223dc3628b543aa704cdbeb453649ea4cbdf32c6 data/enderitemod/advancements/husbandry/obtain_enderite_hoe.json
-a05c0ac9367a811c3f1b44b70abc07171d0ec099 data/enderitemod/advancements/end/obtain_enderite_ore.json
+// 1.20.6	2024-06-21T14:52:26.749786	Simple Enderite Mod/Advancements
+1e41baf924cbd641198dfd7e6e65b07ab5d255c5 data/enderitemod/advancements/end/obtain_enderite_ore.json
+58aeb69f6189a01a54e372d7b37436802e5c22ba data/enderitemod/advancements/end/enderite_armor.json
+ff8489651725d44ef11b171654d95c98fc4cd7a4 data/enderitemod/advancements/husbandry/obtain_enderite_hoe.json

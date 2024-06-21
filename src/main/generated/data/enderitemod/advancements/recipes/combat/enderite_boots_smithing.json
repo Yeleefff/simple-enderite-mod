@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "enderitemod:enderite_ingot"
-            ]
+            "items": "enderitemod:enderite_ingot"
           }
         ]
       },
@@ -30,6 +28,5 @@
     "recipes": [
       "enderitemod:enderite_boots_smithing"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

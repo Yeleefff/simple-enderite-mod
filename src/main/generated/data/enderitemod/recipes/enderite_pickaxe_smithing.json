@@ -7,7 +7,8 @@
     "item": "minecraft:netherite_pickaxe"
   },
   "result": {
-    "item": "enderitemod:enderite_pickaxe"
+    "count": 1,
+    "id": "enderitemod:enderite_pickaxe"
   },
   "template": {
     "item": "enderitemod:enderite_upgrade_smithing_template"

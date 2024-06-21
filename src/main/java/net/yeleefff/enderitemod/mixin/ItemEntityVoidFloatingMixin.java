@@ -26,7 +26,7 @@ public abstract class ItemEntityVoidFloatingMixin extends Entity {
         super(type, world);
     }
 
-    @Inject(method = "tick", at = @At("HEAD"))
+    @Inject(method = "tick()V", at = @At("HEAD"))
     private void floatOverVoid(CallbackInfo ci) {
         if (this.getY() < this.getWorld().getBottomY() || triggered) {
             if (ENDERITE_TOOLS_AND_ARMOR_LIST.contains(getStack().getItem())) {

@@ -15,7 +15,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
+        getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(ModItems.ENDERITE_INGOT);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
@@ -23,8 +23,5 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ENDERITE_CHESTPLATE)
                 .add(ModItems.ENDERITE_LEGGINGS)
                 .add(ModItems.ENDERITE_BOOTS);
-
-        getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
-                .add(ModItems.ENDERITE_INGOT);
     }
 }
