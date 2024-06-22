@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 import net.yeleefff.enderitemod.item.ModItems;
 
 public class ModLootTableModifiers {
-    private static final Identifier END_CITY_CHEST_ID = new Identifier("minecraft", "chests/end_city_treasure");
+    private static final Identifier END_CITY_CHEST_ID = Identifier.of("minecraft", "chests/end_city_treasure");
 
     public static void modifyLootTables() {
 //        LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {

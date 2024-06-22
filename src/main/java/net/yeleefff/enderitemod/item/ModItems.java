@@ -27,11 +27,11 @@ public class ModItems {
 
     public static final Item ENDERITE_UPGRADE_SMITHING_TEMPLATE = registerItems("enderite_upgrade_smithing_template",
             new SmithingTemplateItem(
-                    Text.translatable(Util.createTranslationKey("item", new Identifier(MOD_ID,"smithing_template.enderite_upgrade.applies_to"))).formatted(Formatting.BLUE),
-                    Text.translatable(Util.createTranslationKey("item", new Identifier(MOD_ID,"smithing_template.enderite_upgrade.ingredients"))).formatted(Formatting.BLUE),
-                    Text.translatable(Util.createTranslationKey("upgrade", new Identifier(MOD_ID,"enderite_upgrade"))).formatted(Formatting.GRAY),
-                    Text.translatable(Util.createTranslationKey("item", new Identifier(MOD_ID,"smithing_template.enderite_upgrade.base_slot_description"))),
-                    Text.translatable(Util.createTranslationKey("item", new Identifier(MOD_ID,"smithing_template.enderite_upgrade.additions_slot_description"))),
+                    Text.translatable(Util.createTranslationKey("item", Identifier.of(MOD_ID,"smithing_template.enderite_upgrade.applies_to"))).formatted(Formatting.BLUE),
+                    Text.translatable(Util.createTranslationKey("item", Identifier.of(MOD_ID,"smithing_template.enderite_upgrade.ingredients"))).formatted(Formatting.BLUE),
+                    Text.translatable(Util.createTranslationKey("upgrade", Identifier.of(MOD_ID,"enderite_upgrade"))).formatted(Formatting.GRAY),
+                    Text.translatable(Util.createTranslationKey("item", Identifier.of(MOD_ID,"smithing_template.enderite_upgrade.base_slot_description"))),
+                    Text.translatable(Util.createTranslationKey("item", Identifier.of(MOD_ID,"smithing_template.enderite_upgrade.additions_slot_description"))),
                     NetheriteUpgradeSlotTexturesInvoker.invokeGetNetheriteUpgradeEmptyBaseSlotTextures(),
                     NetheriteUpgradeSlotTexturesInvoker.invokeGetNetheriteUpgradeEmptyAdditionsSlotTextures()));
 
@@ -94,7 +94,7 @@ public class ModItems {
     }
 
     private static Item registerItems(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(EnderiteMod.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(EnderiteMod.MOD_ID, name), item);
     }
 
     public static void registerModItems() {

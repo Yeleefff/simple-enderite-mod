@@ -38,11 +38,11 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(EnderiteMod.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, Identifier.of(EnderiteMod.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, new Identifier(EnderiteMod.MOD_ID, name),
+        return Registry.register(Registries.ITEM, Identifier.of(EnderiteMod.MOD_ID, name),
                 new BlockItem(block, new Item.Settings().fireproof()));
     }
 

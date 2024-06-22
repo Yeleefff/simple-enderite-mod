@@ -46,7 +46,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.ENDER_EYE, 2)
                 .group("enderite")
                 .criterion("has_enderite_scrap", FabricRecipeProvider.conditionsFromItem(ModItems.ENDERITE_SCRAP))
-                .offerTo(exporter, new Identifier("enderitemod:enderite_ingot"));
+                .offerTo(exporter, Identifier.of("enderitemod:enderite_ingot"));
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.ENDERITE_INGOT,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENDERITE_BLOCK, "enderitemod:enderite_block" ,

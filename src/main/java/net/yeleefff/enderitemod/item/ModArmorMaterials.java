@@ -30,7 +30,7 @@ public class ModArmorMaterials {
             Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT}));
 
     private static RegistryEntry<ArmorMaterial> registerArmorMaterials(String id, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
-        List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(new Identifier(id)));
+        List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(Identifier.of(id)));
         EnumMap<ArmorItem.Type, Integer> enumMap = new EnumMap(ArmorItem.Type.class);
         ArmorItem.Type[] armorValues = ArmorItem.Type.values();
         int numArmorValues = armorValues.length;
@@ -40,7 +40,7 @@ public class ModArmorMaterials {
             enumMap.put(type, defense.get(type));
         }
 
-        return Registry.registerReference(Registries.ARMOR_MATERIAL, new Identifier(EnderiteMod.MOD_ID, id), new ArmorMaterial(enumMap, enchantability, equipSound, repairIngredient, layers, toughness, knockbackResistance));
+        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(EnderiteMod.MOD_ID, id), new ArmorMaterial(enumMap, enchantability, equipSound, repairIngredient, layers, toughness, knockbackResistance));
     }
 
     public static void registerModArmorMaterials() {

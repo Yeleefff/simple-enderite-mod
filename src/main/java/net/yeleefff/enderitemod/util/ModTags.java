@@ -10,6 +10,6 @@ public class ModTags {
     public static final TagKey<Block> INCORRECT_FOR_ENDERITE_TOOL = of("incorrect_for_enderite_tool");
 
     private static TagKey<net.minecraft.block.Block> of(String id) {
-        return TagKey.of(RegistryKeys.BLOCK, new Identifier(EnderiteMod.MOD_ID, id));
+        return TagKey.of(RegistryKeys.BLOCK, Identifier.of(EnderiteMod.MOD_ID, id));
     }
 }

@@ -24,7 +24,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
 
     @Override
     public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
-        AdvancementEntry obtainEnderiteOre = Advancement.Builder.create().parent(new Identifier("end/root")).display(
+        AdvancementEntry obtainEnderiteOre = Advancement.Builder.create().parent(Identifier.of("end/root")).display(
                 ModBlocks.ENDERITE_ORE,
                 Text.literal("Hidden in the Void"),
                 Text.literal("Obtain Enderite Debris"),
@@ -49,7 +49,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("enderite_armor", InventoryChangedCriterion.Conditions.items(ModItems.ENDERITE_HELMET, ModItems.ENDERITE_CHESTPLATE, ModItems.ENDERITE_LEGGINGS, ModItems.ENDERITE_BOOTS))
                 .build(consumer, EnderiteMod.MOD_ID + ":end/enderite_armor");
 
-        AdvancementEntry obtainEnderiteHoe = Advancement.Builder.create().parent(new Identifier("husbandry/obtain_netherite_hoe")).display(
+        AdvancementEntry obtainEnderiteHoe = Advancement.Builder.create().parent(Identifier.of("husbandry/obtain_netherite_hoe")).display(
                 ModItems.ENDERITE_HOE,
                 Text.literal("Too Much Dedication"),
                 Text.literal("Use an Enderite Ingot to upgrade a Netherite Hoe after failing to rethink your life choices"),
