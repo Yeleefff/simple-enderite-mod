@@ -1,10 +1,15 @@
 package net.yeleefff.enderitemod.util;
 
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v2.LootTableSource;
 import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 import net.yeleefff.enderitemod.item.ModItems;
 
@@ -22,13 +27,15 @@ public class ModLootTableModifiers {
 //            }
 //        }));
 
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id) -> {
-            if (END_CITY_CHEST_ID.equals(id)) {
+        LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
+            System.out.println(END_CITY_CHEST_ID);
+            System.out.println(key.getValue());
+            if (source.isBuiltin() && END_CITY_CHEST_ID.equals(key.getValue())) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
+                        .conditionally(RandomChanceLootCondition.builder(0.07f))
                         .with(ItemEntry.builder(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE));
-                lootManager.pool(poolBuilder.build());
+                tableBuilder.pool(poolBuilder.build());
             }
         });
     }
