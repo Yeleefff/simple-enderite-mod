@@ -28,8 +28,6 @@ public class ModLootTableModifiers {
 //        }));
 
         LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
-            System.out.println(END_CITY_CHEST_ID);
-            System.out.println(key.getValue());
             if (source.isBuiltin() && END_CITY_CHEST_ID.equals(key.getValue())) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
